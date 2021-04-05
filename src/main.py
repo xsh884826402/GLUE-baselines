@@ -171,10 +171,12 @@ def main(arguments):
                 log.info("Scaling losses to the smallest task")
             elif args.scaling_method == 'unit':
                 log.info("Dividing losses by number of training batches")
+            print('debug 1')
             best_epochs = trainer.train(train_tasks, args.val_interval, args.bpp_base,
                                         args.weighting_method, args.scaling_method, to_train,
                                         opt_params, schd_params, args.shared_optimizer,
                                         args.load_model)
+            print('debug 2')
     else:
         log.info("Skipping training.")
         best_epochs = {}
