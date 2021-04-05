@@ -161,7 +161,7 @@ class SamplingMultiTaskTrainer():
         for task in tasks:
             task_info = task_infos[task.name]
             tr_generator = iterator(task.train_data, num_epochs=None, cuda_device=self._cuda_device)
-            print('\n\n debug in _setupp_training', iterator.get_num_batches(task.train_data), task.train_data)
+            print('\n\n debug in _setupp_training, task',task_info, iterator.get_num_batches(task.train_data),)
             task_info['n_tr_batches'] = iterator.get_num_batches(task.train_data)
             task_info['tr_generator'] = tr_generator
             task_info['loss'] = 0.0
