@@ -36,7 +36,7 @@ def main(arguments):
 
     # Time saving flags
     parser.add_argument('--should_train', help='1 if should train model', type=int, default=1)
-    parser.add_argument('--load_model', help='1 if load from checkpoint', type=int, default=1)
+    parser.add_argument('--load_model', help='1 if load from checkpoint', type=int, default=0)
     parser.add_argument('--load_epoch', help='Force loading from a certain epoch', type=int,
                         default=-1)
     parser.add_argument('--load_tasks', help='1 if load tasks', type=int, default=1)
