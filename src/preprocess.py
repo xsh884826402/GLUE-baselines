@@ -22,6 +22,7 @@ else:
 PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
 
 #ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
+
 ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
              'cola': (CoLATask, 'CoLA/'),
