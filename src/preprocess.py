@@ -18,7 +18,7 @@ from tasks import CoLATask, MRPCTask, MultiNLITask, QQPTask, RTETask, \
 if "cs.nyu.edu" in os.uname()[1] or "dgx" in os.uname()[1]:
     PATH_PREFIX = '/misc/vlgscratch4/BowmanGroup/awang/'
 else:
-    PATH_PREFIX = '/home/ubuntu/User/xsh/GLUE-baselines/glue_data'
+    PATH_PREFIX = '/home/ubuntu/User/xsh/GLUE-baselines/glue_data/'
 # PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
 
 #ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
