@@ -21,10 +21,10 @@ else:
     PATH_PREFIX = '/home/ubuntu/User/xsh/GLUE-baselines/glue_data/'
 # PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
 
-#ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
+ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 
 # ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
-ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli']
+# ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'gitsst', 'sts-b', 'wnli']
 # ALL_TASKS = ['qqp']
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
              'cola': (CoLATask, 'CoLA/'),
