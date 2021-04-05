@@ -52,8 +52,8 @@ def build_tasks(args):
             tasks = []
         else:
             tasks = task_list.split(',')
-        # return tasks
-        return ALL_TASKS
+        return tasks
+        # return ALL_TASKS
     train_task_names = parse_tasks(args.train_tasks)
     eval_task_names = parse_tasks(args.eval_tasks)
     all_task_names = list(set(train_task_names + eval_task_names))
