@@ -24,8 +24,8 @@ else:
 #ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 
 # ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
-# ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli', 'cola']
-ALL_TASKS = ['mnli']
+ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli', ]
+# ALL_TASKS = ['mnli']
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
              'cola': (CoLATask, 'CoLA/'),
              'mrpc': (MRPCTask, 'MRPC/'),
