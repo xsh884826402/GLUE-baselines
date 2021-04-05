@@ -18,12 +18,14 @@ from tasks import CoLATask, MRPCTask, MultiNLITask, QQPTask, RTETask, \
 if "cs.nyu.edu" in os.uname()[1] or "dgx" in os.uname()[1]:
     PATH_PREFIX = '/misc/vlgscratch4/BowmanGroup/awang/'
 else:
-    PATH_PREFIX = '/beegfs/aw3272/'
-PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
+    PATH_PREFIX = '/home/ubuntu/User/xsh/GLUE-baselines/glue_data'
+# PATH_PREFIX = PATH_PREFIX + 'processed_data/mtl-sentence-representations/'
 
 #ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 
-ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
+# ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
+ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli', 'cola']
+
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
              'cola': (CoLATask, 'CoLA/'),
              'mrpc': (MRPCTask, 'MRPC/'),
@@ -50,8 +52,8 @@ def build_tasks(args):
             tasks = []
         else:
             tasks = task_list.split(',')
-        return tasks
-
+        # return tasks
+        return ALL_TASKS
     train_task_names = parse_tasks(args.train_tasks)
     eval_task_names = parse_tasks(args.eval_tasks)
     all_task_names = list(set(train_task_names + eval_task_names))
