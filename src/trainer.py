@@ -185,7 +185,7 @@ class SamplingMultiTaskTrainer():
               weighting_method, scaling_method,
               train_params, optimizer_params, scheduler_params,
               shared_optimizer=0, load_model=1):
-
+        print('in train. train model is', load_model )
         iterator = self._iterator
         task_infos, metric_infos = self._setup_training(tasks, train_params, optimizer_params,
                                                         scheduler_params, iterator)

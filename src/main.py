@@ -46,7 +46,7 @@ def main(arguments):
     parser.add_argument('--train_tasks', help='comma separated list of tasks, or "all" or "none"',
                         type=str)
     parser.add_argument('--eval_tasks', help='list of additional tasks to train a classifier,' +
-                        'then evaluate on', type=str, default='')
+                        'then evaluate on', type=str, default='none')
     parser.add_argument('--classifier', help='type of classifier to use', type=str,
                         default='log_reg', choices=['log_reg', 'mlp', 'fancy_mlp'])
     parser.add_argument('--classifier_hid_dim', help='hid dim of classifier', type=int, default=512)
