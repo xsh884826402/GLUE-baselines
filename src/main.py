@@ -82,13 +82,13 @@ def main(arguments):
                         type=int, default=1)
     parser.add_argument('--batch_size', help='batch size', type=int, default=64)
     parser.add_argument('--optimizer', help='optimizer to use', type=str, default='sgd')
-    parser.add_argument('--n_epochs', help='n epochs to train for', type=int, default=10)
+    parser.add_argument('--n_epochs', help='n epochs to train for', type=int, default=100)
     parser.add_argument('--lr', help='starting learning rate', type=float, default=1.0)
     parser.add_argument('--min_lr', help='minimum learning rate', type=float, default=1e-5)
     parser.add_argument('--max_grad_norm', help='max grad norm', type=float, default=5.)
     parser.add_argument('--weight_decay', help='weight decay value', type=float, default=0.0)
     parser.add_argument('--task_patience', help='patience in decaying per task lr',
-                        type=int, default=0)
+                        type=int, default=5)
     parser.add_argument('--scheduler_threshold', help='scheduler threshold',
                         type=float, default=0.0)
     parser.add_argument('--lr_decay_factor', help='lr decay factor when val score doesn\'t improve',
@@ -109,7 +109,7 @@ def main(arguments):
                         choices=['uniform', 'proportional'], default='uniform')
     parser.add_argument('--scaling_method', help='method for scaling loss', type=str,
                         choices=['min', 'max', 'unit', 'none'], default='none')
-    parser.add_argument('--patience', help='patience in early stopping', type=int, default=5)
+    parser.add_argument('--patience', help='patience in early stopping', type=int, default=10)
     parser.add_argument('--task_ordering', help='Method for ordering tasks', type=str, default='given',
                         choices=['given', 'random', 'random_per_pass', 'small_to_large', 'large_to_small'])
 
