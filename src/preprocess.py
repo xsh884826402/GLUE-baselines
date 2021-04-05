@@ -24,7 +24,7 @@ else:
 #ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnli', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
 
 # ALL_TASKS = ['mnli', 'mrpc', 'qqp', 'rte', 'qnliv2', 'snli', 'sst', 'sts-b', 'wnli', 'cola']
-ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli', ]
+ALL_TASKS = ['mnli', 'qqp', 'rte', 'qnli', 'sst', 'sts-b', 'wnli']
 # ALL_TASKS = ['qqp']
 NAME2INFO = {'sst': (SSTTask, 'SST-2/'),
              'cola': (CoLATask, 'CoLA/'),
@@ -56,7 +56,7 @@ def build_tasks(args):
         # return ALL_TASKS
     train_task_names = parse_tasks(args.train_tasks)
     eval_task_names = parse_tasks(args.eval_tasks)
-    print('in Preprocess',train_task_names, eval_task_names)
+    print('in Preprocess', train_task_names, eval_task_names)
     all_task_names = list(set(train_task_names + eval_task_names))
     tasks = get_tasks(all_task_names, args.max_seq_len, args.load_tasks)
 
