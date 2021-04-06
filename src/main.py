@@ -71,7 +71,7 @@ def main(arguments):
                         choices=['simple', 'attn'])
     parser.add_argument('--d_hid', help='hidden dimension size', type=int, default=1500)
     parser.add_argument('--n_layers_enc', help='number of RNN layers', type=int, default=2)
-    parser.add_argument('--n_layers_highway', help='num of highway layers', type=int, default=3)
+    parser.add_argument('--n_layers_highway', help='num of highway layers', type=int, default=1)
     parser.add_argument('--dropout', help='dropout rate to use in training', type=float, default=.2)
 
     # Training options
