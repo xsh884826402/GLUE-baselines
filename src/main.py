@@ -77,7 +77,7 @@ def main(arguments):
     # Training options
     parser.add_argument('--no_tqdm', help='1 to turn off tqdm', type=int, default=0)
     parser.add_argument('--trainer_type', help='type of trainer', type=str,
-                        choices=['sampling', 'mtl'], default='sampling')
+                        choices=['sampling', 'mtl'], default='mtl')
     parser.add_argument('--shared_optimizer', help='1 to use same optimizer for all tasks',
                         type=int, default=1)
     parser.add_argument('--batch_size', help='batch size', type=int, default=64)
@@ -96,7 +96,7 @@ def main(arguments):
 
     # Multi-task training options
     parser.add_argument('--val_interval', help='Number of passes between validation checks',
-                        type=int, default=10)
+                        type=int, default=50)
     parser.add_argument('--max_vals', help='Maximum number of validation checks', type=int,
                         default=100)
     parser.add_argument('--bpp_method', help='if using nonsampling trainer, ' +
