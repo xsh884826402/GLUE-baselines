@@ -48,13 +48,13 @@ def main(arguments):
     parser.add_argument('--eval_tasks', help='list of additional tasks to train a classifier,' +
                         'then evaluate on', type=str, default='none')
     parser.add_argument('--classifier', help='type of classifier to use', type=str,
-                        default='log_reg', choices=['log_reg', 'mlp', 'fancy_mlp'])
+                        default='mlp', choices=['log_reg', 'mlp', 'fancy_mlp'])
     parser.add_argument('--classifier_hid_dim', help='hid dim of classifier', type=int, default=512)
     parser.add_argument('--classifier_dropout', help='classifier dropout', type=float, default=0.0)
 
     # Preprocessing options
-    parser.add_argument('--max_seq_len', help='max sequence length', type=int, default=40)
-    parser.add_argument('--max_word_v_size', help='max word vocab size', type=int, default=30000)
+    parser.add_argument('--max_seq_len', help='max sequence length', type=int, default=60)
+    parser.add_argument('--max_word_v_size', help='max word vocab size', type=int, default=50000)
 
     # Embedding options
     parser.add_argument('--dropout_embs', help='dropout rate for embeddings', type=float, default=.2)
@@ -67,11 +67,11 @@ def main(arguments):
     parser.add_argument('--cove', help='1 if use cove', type=int, default=0)
 
     # Model options
-    parser.add_argument('--pair_enc', help='type of pair encoder to use', type=str, default='simple',
+    parser.add_argument('--pair_enc', help='type of pair encoder to use', type=str, default='attn',
                         choices=['simple', 'attn'])
-    parser.add_argument('--d_hid', help='hidden dimension size', type=int, default=4096)
-    parser.add_argument('--n_layers_enc', help='number of RNN layers', type=int, default=1)
-    parser.add_argument('--n_layers_highway', help='num of highway layers', type=int, default=1)
+    parser.add_argument('--d_hid', help='hidden dimension size', type=int, default=1500)
+    parser.add_argument('--n_layers_enc', help='number of RNN layers', type=int, default=2)
+    parser.add_argument('--n_layers_highway', help='num of highway layers', type=int, default=3)
     parser.add_argument('--dropout', help='dropout rate to use in training', type=float, default=.2)
 
     # Training options
@@ -81,7 +81,7 @@ def main(arguments):
     parser.add_argument('--shared_optimizer', help='1 to use same optimizer for all tasks',
                         type=int, default=1)
     parser.add_argument('--batch_size', help='batch size', type=int, default=64)
-    parser.add_argument('--optimizer', help='optimizer to use', type=str, default='sgd')
+    parser.add_argument('--optimizer', help='optimizer to use', type=str, default='adam')
     parser.add_argument('--n_epochs', help='n epochs to train for', type=int, default=100)
     parser.add_argument('--lr', help='starting learning rate', type=float, default=1.0)
     parser.add_argument('--min_lr', help='minimum learning rate', type=float, default=1e-5)
